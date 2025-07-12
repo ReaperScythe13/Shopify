@@ -1,0 +1,57 @@
+###Get the web page
+GET http://localhost:5003
+
+
+###Register a user
+POST http://localhost:5003/auth/register
+Content-Type: application/json
+
+{
+    "username": "bob124",
+    "email": "b@2b.com",
+    "password": "cat123"
+
+}
+
+###login a user
+POST http://localhost:5003/auth/login
+Content-Type: application/json
+
+{
+    "username": "bob124",
+    "password": "cat123"
+
+}
+
+###Create a Item
+POST http://localhost:5003/shop/item
+Content-Type: application/json
+
+{
+    "description": "A basketball hoop with great size to keep you playing", 
+    "name": "Elite Hoop", 
+    "brand": "Spalding", 
+    "quantity": 1
+}
+###SELECT all items
+GET http://localhost:5003/shop/
+
+###SELECT a specific Item
+GET http://localhost:5003/shop/
+
+###Get users orders
+GET http://localhost:5003/orders/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUyMTA3MzIyLCJleHAiOjE3NTIxOTM3MjJ9.DXu-2p_brfv2k4m8lPSU5D-4Kdv8Tu9czjQCvSkU-Bk
+
+
+###Create a order
+POST http://localhost:5003/orders/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUyMTA3MzIyLCJleHAiOjE3NTIxOTM3MjJ9.DXu-2p_brfv2k4m8lPSU5D-4Kdv8Tu9czjQCvSkU-Bk
+Content-Type: application/json
+
+{
+    "items": [
+        { "id": 1, "quantity": 1 }
+        
+      ] 
+}
