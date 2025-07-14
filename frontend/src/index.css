@@ -86,10 +86,30 @@ footer p{
 
 /*Homepage CSS*/
 .homepage{
+    height: 70vh;
     padding: 1em 1em 1em 3rem;
     background-image: url("./assets/cropped-photo-basketball-player-holding-ball.jpg");
-    height: 70vh;
     background-position: center;
     background-size: cover;
     color: #f5f5dc;
+    align-content: center;
+    background-color: gray;
+    background-blend-mode: darken;
+}
+.homepage h1 {
+     max-width: 550px;
+
+}
+.homepage button{
+    display: inline-block;
+    padding: 0.5em 2em;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #212d40;
+    background-color: #f5f5dc;
+}
+.homepage button:hover{
+    color: #f5f5dc;
+    background-color: #212d40;
+    transition: color 1.5s, background-color 1.5s;
 }
