@@ -27,12 +27,15 @@ Content-Type: application/json
 POST http://localhost:5003/shop/item
 Content-Type: application/json
 
+
 {
-    "description": "A basketball hoop with great size to keep you playing", 
-    "name": "Elite Hoop", 
-    "brand": "Spalding", 
-    "quantity": 1
+    "description": "Portable basketball pump with dual-action inflation",
+    "name": "Air Booster Pump",
+    "brand": "Molten",
+    "quantity": 20,
+    "imageUrl": "/assets/air-pump.jpg"
 }
+
 ###SELECT all items
 GET http://localhost:5003/shop/
 

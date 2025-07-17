@@ -4,9 +4,16 @@ import shopRoutes from './routes/shopRoutes.js'
 import authMiddleware from './middleware/authMiddleware.js'
 import orderRoutes from './routes/orderRoutes.js'
 import cors from 'cors'
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express()
 const PORT = process.env.PORT || 5003
+
+//setup for static file use
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 app.use(express.json())
 
@@ -19,6 +26,8 @@ app.get("/", (req, res) => {
     res.header('Content-type','text/html')
     res.send('<p>hello</p>')
 })
+
+app.use('/assets', express.static(path.join(__dirname, "assets")))
 
 app.use('/auth', authRoutes)
 app.use('/shop', shopRoutes)
