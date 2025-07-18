@@ -38,7 +38,7 @@ export default function Shop(){
         <h1>There was a error {error}</h1>
     }
     try{
-    return items ? <div>{ allItems }</div> : <h1>No items</h1>
+    return items ? <div className="items">{ allItems }</div> : <h1>No items</h1>
 }catch(err){
     return console.log(err)
 }
