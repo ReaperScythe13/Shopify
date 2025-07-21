@@ -12,11 +12,13 @@ function App(){
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
+                    <Route path="login" element={<Login />} />
                     <Route element={<AuthRequired />}>
                         <Route index element={<Home />} />
                         <Route path="shop" element={<Shop />} />
-                        <Route path="login" element={<Login />} />
                     </Route>
+                        
+                    
                 </Route>
             </Routes>
         </BrowserRouter>

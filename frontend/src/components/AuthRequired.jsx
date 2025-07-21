@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet, Navigate, useLocation } from "react-router-dom";
 
 export default function AuthRequired(){
-    const isLoggedIn = localStorage.getItem('token')
+    const isLoggedIn = localStorage.getItem('key')
     const location = useLocation()
 
     if (!isLoggedIn){
