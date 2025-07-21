@@ -169,9 +169,74 @@ footer p{
     margin: 0;
     margin-bottom: 0.5em;
 }
+/*Login/Register Form*/
 .loginForm{
+    margin: 0 auto;
     height: 100vh;
     display: flex;
     flex-direction: column;
     max-width: 600px;
+    justify-content: center;
+}
+.login{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 3em 1em;
+    
+    background: #212d40;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: none;
+}
+.login-btn{
+    margin: 0 auto;
+    width: 105.6%;
+    padding: 1em;
+    background: #212d40;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: none;
+    color: #f5f5dc;
+}
+.login input{
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 3em;
+    padding: 0.5em 1.5em 0.5em 1em;
+    background-color: #f5f5dc;
+    border: none;
+    border-radius: 16px;
+}
+
+.login button{
+    max-width: 400px;
+    width: 50%;
+    padding: 0.5em 1.5em 0.5em 0;
+    background-color: #f5f5dc;
+    border: none;
+    border-radius: 16px;
+}
+.login-error{
+    color: red;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+label{
+    align-self:center;
+    color: #f5f5dc;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
