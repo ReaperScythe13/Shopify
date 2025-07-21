@@ -18,7 +18,7 @@ export default function Login(){
                 body: JSON.stringify(loginData)
             }
         )
-        const data = response.json()
+        const data = await response.json()
         if(!response.ok){
             throw{
                 message: data.message,
@@ -27,7 +27,8 @@ export default function Login(){
 
             }
         }
-            localStorage.setItem('loggedin', true)
+            localStorage.setItem('key', data.token)
+            console.log(data.token)
       }catch(err){
             setError(err)
       }finally{
