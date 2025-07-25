@@ -240,3 +240,67 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+/*Specific Item CSS*/
+.productContainer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em 1em 1em 1em; 
+    justify-content: center; 
+}
+
+.product{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 68% auto auto auto auto;
+    margin-top: 1em;
+    justify-content: center;
+    justify-self: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 800px;
+    padding: 1.5em 1em;
+}
+.product img{
+    background-color: red;
+    width: 100%;
+    grid-column: 1/span 3;
+    grid-row: 1;
+    margin: 0;
+    margin-bottom: 1em;
+    max-width: 262px;
+    max-height: 269px;
+    object-fit: cover;
+    justify-self: center;
+    align-self: self-end;
+}
+.product h3{
+    grid-column: 1/span 3;
+    grid-row: 2;
+    margin: 0;
+    padding: 0;
+    max-height: 26px;
+}
+
+.product p{
+    grid-column: 1/span 3;
+    grid-row: auto;
+    margin: 0;
+    margin-bottom: 0.2em;
+}
+.back-button {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin-left: 26px;
+}
+
+.back-button span:hover {
+    text-decoration: underline;
+}

@@ -15,10 +15,13 @@ export default function Shop(){
                 setItems(data.items)
                 }catch(err){
                     return setError(err)
-                }
+                }finally {
+                setLoading(false)
+             }
             }
             getItems()
     }, [])
+    
     const allItems = items.map(item => (
          <div key={item.id} className="item">
             <Link to={item.id.toString()}>
@@ -32,13 +35,13 @@ export default function Shop(){
     ))
 
     if(loading){
-        <h1>Loading...</h1>
+        return <h1>Loading...</h1>
     }
     if(error){
-        <h1>There was a error {error}</h1>
+        return <h1>There was a error: {error}</h1>
     }
     try{
-    return items ? <div className="items">{ allItems }</div> : <h1>No items</h1>
+    return items ? <div className="items">{ allItems }</div> : <h1>No item</h1>
 }catch(err){
     return console.log(err)
 }
